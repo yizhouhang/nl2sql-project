@@ -1,0 +1,187 @@
+[
+  {
+    "role": "user",
+    "content": "how many movies are there",
+    "timestamp": "2025-01-27T17:32:37.479496"
+  },
+  {
+    "role": "user",
+    "content": "",
+    "timestamp": "2025-02-03T16:04:14.397974"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Response not found\nSQL Query: Query not found",
+    "timestamp": "2025-02-03T16:04:15.911579"
+  },
+  {
+    "role": "user",
+    "content": "select all movies",
+    "timestamp": "2025-02-03T16:04:29.725137"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Provide a list of all movies from the films table.\nSQL Query: SELECT * FROM films;",
+    "timestamp": "2025-02-03T16:04:31.199541"
+  },
+  {
+    "role": "user",
+    "content": "select all films",
+    "timestamp": "2025-02-03T16:20:55.534040"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Retrieve all records from the films table, which contains details about each film.\nSQL Query: SELECT * FROM films;",
+    "timestamp": "2025-02-03T16:20:57.598989"
+  },
+  {
+    "role": "user",
+    "content": "show me all customers from US who have rented a film in English",
+    "timestamp": "2025-02-03T16:24:30.509407"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Provide a list of customers from the customers table who are located in the US. Cross-reference these customers with the rentals table to ensure they have rented a film. Additionally, verify that the film rented has the language 'English' by joining with the films and languages tables.\nSQL Query: SELECT * FROM customers WHERE country = 'US' AND customer_id IN (SELECT customer_id FROM rentals WHERE film_id IN (SELECT film_id FROM films WHERE language_id = (SELECT language_id FROM languages WHERE name = 'English')));",
+    "timestamp": "2025-02-03T16:24:33.592261"
+  },
+  {
+    "role": "user",
+    "content": "show me all actors",
+    "timestamp": "2025-02-03T16:52:18.045186"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Retrieve a list of all actors from the actors table.\nSQL Query: SELECT * FROM actors;",
+    "timestamp": "2025-02-03T16:52:20.216009"
+  },
+  {
+    "role": "user",
+    "content": "show me all actors from US",
+    "timestamp": "2025-02-03T16:55:39.597096"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Provide a list of actors from the actors table who are from the US, which can be checked using a field that specifies their country or nationality. However, our current schema does not specify an explicit 'country' or 'nationality' column within the actors table, thus we cannot fulfill this query directly.\nSQL Query: Query not found",
+    "timestamp": "2025-02-03T16:55:40.823092"
+  },
+  {
+    "role": "user",
+    "content": "show me all category",
+    "timestamp": "2025-02-03T16:56:04.348684"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Show all categories from the categories table. This involves retrieving all records from the table that stores category information.\nSQL Query: SELECT * FROM categories;",
+    "timestamp": "2025-02-03T16:56:05.824510"
+  },
+  {
+    "role": "user",
+    "content": "show me all actor",
+    "timestamp": "2025-02-03T17:04:24.245365"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Provide a list of all actors from the actors table.\nSQL Query: SELECT * FROM actors;",
+    "timestamp": "2025-02-03T17:04:26.090404"
+  },
+  {
+    "role": "user",
+    "content": "show me all actor (the table is called actor not actors)",
+    "timestamp": "2025-02-03T17:05:33.836666"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Retrieve all records from the actor table, displaying every column and row available within the actor table.\nSQL Query: SELECT * FROM actor;",
+    "timestamp": "2025-02-03T17:05:35.006107"
+  },
+  {
+    "role": "user",
+    "content": "show me all category",
+    "timestamp": "2025-02-03T17:15:28.308883"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Retrieve all the records from the category table, which contains information about different categories of films.\nSQL Query: SELECT * FROM category;",
+    "timestamp": "2025-02-03T17:15:30.634634"
+  },
+  {
+    "role": "user",
+    "content": "show me all film",
+    "timestamp": "2025-02-03T17:16:19.932928"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Retrieve all records from the film table, which contains details about each film available in the database.\nSQL Query: SELECT * FROM film;",
+    "timestamp": "2025-02-03T17:16:24.613729"
+  },
+  {
+    "role": "user",
+    "content": "show me all film with length greater than 170",
+    "timestamp": "2025-02-03T17:16:45.860956"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Retrieve all films from the film table where the length of the film is greater than 170 minutes.\nSQL Query: SELECT * FROM film WHERE length > 170;",
+    "timestamp": "2025-02-03T17:16:46.964918"
+  },
+  {
+    "role": "user",
+    "content": "show me all films that is in English",
+    "timestamp": "2025-02-05T09:19:18.366638"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: To retrieve all films that are in English, I will need to filter the films from the film table where the language_id is set to 1, assuming that 1 is the ID for English in the language table. I will join the film table with the language table to confirm this correlation and retrieve the details of those films in English.\nSQL Query: SELECT * FROM film WHERE language_id = (SELECT language_id FROM language WHERE name = 'English');",
+    "timestamp": "2025-02-05T09:19:22.653190"
+  },
+  {
+    "role": "user",
+    "content": "show me all films with rating PG",
+    "timestamp": "2025-02-05T09:19:59.173930"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Retrieve all entries from the film table where the rating column has a value of 'PG'.\nSQL Query: SELECT * FROM film WHERE rating = 'PG';",
+    "timestamp": "2025-02-05T09:20:01.899166"
+  },
+  {
+    "role": "user",
+    "content": "show me all PG rated movies",
+    "timestamp": "2025-02-05T09:53:31.111835"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Retrieve all movies with a \"PG\" rating from the film table by filtering the rows where the rating column contains the value \"PG\".\nSQL Query: SELECT * FROM film WHERE rating = 'PG';",
+    "timestamp": "2025-02-05T09:53:33.167700"
+  },
+  {
+    "role": "user",
+    "content": "What is the average salary of employees in the Engineering department?",
+    "timestamp": "2025-02-12T17:30:38.099651"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Calculate the average salary from the employees who work in the Engineering department based on department and salary information. This requires filtering the employees by the department name 'Engineering' and then calculating the average of their salaries.\nSQL Query: SELECT AVG(salary) FROM employees WHERE department = 'Engineering';",
+    "timestamp": "2025-02-12T17:30:40.618995"
+  },
+  {
+    "role": "user",
+    "content": "show me all movies rated PG",
+    "timestamp": "2025-02-24T09:22:46.114469"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Retrieve all movies that have been rated as PG by checking the rating column in the film table for records marked with the 'PG' rating.\nSQL Query: SELECT * FROM film WHERE rating = 'PG';",
+    "timestamp": "2025-02-24T09:22:48.636661"
+  },
+  {
+    "role": "user",
+    "content": "how many movies have a length greater than 180",
+    "timestamp": "2025-02-24T09:40:33.816352"
+  },
+  {
+    "role": "assistant",
+    "content": "Technical Translation: Determine the count of movies (from the film table) that have a length field value greater than 180. This will involve using the COUNT() function filtered by the length condition.\nSQL Query: SELECT COUNT(*) FROM film WHERE length > 180;",
+    "timestamp": "2025-02-24T09:40:35.927920"
+  }
+]

@@ -1,0 +1,13 @@
+# Ignore environment and secret files
+apikey.env
+apikey.py
+
+# Ignore system files
+.DS_Store
+
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+src/__pycache__/
