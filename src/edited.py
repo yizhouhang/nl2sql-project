@@ -187,7 +187,7 @@ def execute_query(er_diagram):
     SQL_query, text_response = get_sql_query(NLP_query)
     last_technical_translation = text_response
 
-    add_to_chat_history("assistant", f"Technical Translation: {text_response}\nSQL Query: {SQL_query}")
+    add_to_chat_history("assistant", f"Technical Translation") 
 
     console_popup.log(f"Technical Translation: {text_response}")
     # Show technical translation & SQL query every time
@@ -216,7 +216,7 @@ def execute_query(er_diagram):
             result_tree.column(col, width=150)
 
         # Insert the results row by row
-        for row in results:
+        for row in results:  
             result_tree.insert("", "end", values=row)
 
         console_popup.log("Query executed successfully.")
